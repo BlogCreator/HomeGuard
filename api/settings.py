@@ -38,6 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+
+    # Model
+    'DeviceModel',
+    # 'SensorModel',
+    # 'SensorTypeModel',
+    # 'TimeLineModel',
 ]
 
 MIDDLEWARE = [
@@ -75,17 +81,16 @@ WSGI_APPLICATION = 'api.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
-    '''
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-    '''
+    # 'default': {
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #}
+
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'home_guard',
-        'USER': 'root',
-        'PASSWORD': '',
+        'NAME': 'homeguard',
+        'USER': 'homeguard',
+        'PASSWORD': '123456',
         'HOST':'localhost',
         'PORT':'3306',
     }
@@ -114,9 +119,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-CN'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'AsiaShanghai'
 
 USE_I18N = True
 
