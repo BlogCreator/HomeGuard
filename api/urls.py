@@ -16,16 +16,18 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework import routers
-from device.view_set import DeviceViewSet
-from sensor.view_set import SensorViewSet
-from sensor_types.view_set import SensorTypeViewSet
-from time_line.view_set import TimeLineViewSet
+from device.views import DeviceViewSet
+from sensor.views import SensorViewSet
+from sensor_types.views import SensorTypeViewSet
+from time_line.views import TimeLineViewSet
+from user.views import UserViewSet
 
 router = routers.DefaultRouter()
 router.register(r'device', DeviceViewSet)
 router.register(r'sensor', SensorViewSet)
 router.register(r'sensor_type', SensorTypeViewSet)
 router.register(r'time_line', TimeLineViewSet)
+router.register(r'user', UserViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),

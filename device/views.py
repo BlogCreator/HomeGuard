@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from device.models import DeviceModel
+from device.serializer import DeviceSerializer
 
-# Create your views here.
+class DeviceViewSet(viewsets.ModelViewSet):
+    queryset = DeviceModel.objects.all()
+    serializer_class = DeviceSerializer
