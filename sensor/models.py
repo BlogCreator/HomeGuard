@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.db import models
 from device.models import DeviceModel
 from sensor_types.models import SensorTypeModel

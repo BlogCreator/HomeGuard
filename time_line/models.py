@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.db import models
 from sensor.models import SensorModel
 from device.models import DeviceModel
@@ -10,4 +11,4 @@ class TimeLineModel(models.Model):
     value = models.CharField(max_length=255)
 
     class Meta:
-        db_table = 'time_line'
+       db_table = 'time_line'
