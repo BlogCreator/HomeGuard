@@ -17,10 +17,12 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework import routers
 from device.views import DeviceViewSet
+from group.views import GroupViewSet
 from sensor.views import SensorViewSet
 from sensor_types.views import SensorTypeViewSet
 from time_line.views import TimeLineViewSet
 from user.views import UserViewSet
+from client_interface.views import handle_client_request
 
 router = routers.DefaultRouter()
 router.register(r'device', DeviceViewSet)
@@ -28,8 +30,10 @@ router.register(r'sensor', SensorViewSet)
 router.register(r'sensor_type', SensorTypeViewSet)
 router.register(r'time_line', TimeLineViewSet)
 router.register(r'user', UserViewSet)
+router.register(r'group', GroupViewSet)
 
 urlpatterns = [
+    url(r'^client_interface', handle_client_request),
     url(r'^', include(router.urls)),
     url(r'^admin/', admin.site.urls),
 ]

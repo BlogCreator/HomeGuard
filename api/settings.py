@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'sensor',
     'sensor_types',
     'time_line',
-    'user'
+    'user',
+    'group'
 ]
 
 MIDDLEWARE = [

@@ -6,4 +6,4 @@ from device.models import DeviceModel
 class DeviceSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = DeviceModel
-        fields = ('device_id', 'name', 'position', 'user_id')
+        fields = ('device_id', 'name', 'position', 'user')
