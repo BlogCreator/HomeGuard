@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 class RequestMethodError(RuntimeError):
-    def __init__(self, arg):
-        self.args = arg
+    pass
 
 class JsonError(RuntimeError):
-    def __init__(self, arg):
-        self.args = arg
+    pass
