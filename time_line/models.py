@@ -7,8 +7,8 @@ from device.models import DeviceModel
 class TimeLineModel(models.Model):
     sensor = models.ForeignKey(SensorModel)
     device = models.ForeignKey(DeviceModel)
-    time = models.DateTimeField()
-    value = models.CharField(max_length=255)
+    time = models.IntegerField()
+    value = models.IntegerField(max_length=255)
 
     class Meta:
        db_table = 'time_line'

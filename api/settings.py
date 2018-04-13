@@ -89,8 +89,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'homeguard',
-        'USER': 'homeguard',
-        'PASSWORD': '123456',
+        'USER': 'root',
+        'PASSWORD': '1234',
         'HOST':'localhost',
         'PORT':'3306',
     }
@@ -119,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'zh-CN'
+LANGUAGE_CODE = 'en-US'
 
 TIME_ZONE = 'Asia/Shanghai'
 
@@ -146,3 +146,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+
+ALLOWED_HOSTS = ["*"]

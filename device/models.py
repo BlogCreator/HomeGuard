@@ -15,3 +15,6 @@ class DeviceModel(models.Model):
 
     class Meta:
         db_table = 'devices'
+
+class DoesNotExist(Exception):
+    pass
